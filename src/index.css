@@ -1,0 +1,53 @@
+@import "tailwindcss";
+@custom-variant dark (&:where(.dark, .dark *));
+
+@layer base {
+  :root {
+    color-scheme: dark;
+    --fd-bg: #151A20;
+    --fd-sidebar: #1C232B;
+    --fd-surface: #242D36;
+    --fd-surface-inset: #1A2128;
+    --fd-text: #F1F5F4;
+    --fd-text-muted: #A0ADA9;
+    --fd-border: #343F49;
+    --fd-mint: #8BE0BC;
+    --fd-blue: #8ABEFF;
+    --fd-lavender: #B9A5F5;
+  }
+
+  body {
+    font-family: 'Plus Jakarta Sans', 'Segoe UI Variable Text', 'Segoe UI', system-ui, -apple-system, sans-serif;
+    background-color: #151A20;
+    color: #F1F5F4;
+    margin: 0;
+  }
+
+  .font-mono-tabular {
+    font-family: 'JetBrains Mono', 'Cascadia Mono', 'Consolas', ui-monospace, SFMono-Regular, Menlo, monospace;
+    font-variant-numeric: tabular-nums;
+  }
+
+  .tabular-nums {
+    font-variant-numeric: tabular-nums;
+  }
+}
+
+/* Subtle dark Windows-inspired scrollbar */
+::-webkit-scrollbar {
+  width: 8px;
+  height: 8px;
+}
+
+::-webkit-scrollbar-track {
+  background: #151A20;
+}
+
+::-webkit-scrollbar-thumb {
+  background: rgba(160, 173, 169, 0.24);
+  border-radius: 9999px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: rgba(160, 173, 169, 0.4);
+}
